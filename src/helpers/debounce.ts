@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const debounce = <F extends (...args: unknown[] | any) => unknown>(
   func: F,
   waitFor: number
