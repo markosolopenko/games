@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://markosolopenko.github.io/games",
-  "proxy": "http://test-proxy-server-lup-env.eba-2ipxdf96.ap-southeast-2.elasticbeanstalk.com/",
+  "proxy": "https://test-proxy-server-lup-env.eba-2ipxdf96.ap-southeast-2.elasticbeanstalk.com/",
   "dependencies": {
     "@shelf/eslint-config": "^2.21.0",
     "@testing-library/jest-dom": "^5.16.4",
