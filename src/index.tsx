@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import { GamesContextProvider } from "./context/GamesContext";
 
@@ -10,7 +11,9 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <GamesContextProvider>
-    <App />
-  </GamesContextProvider>
+  <BrowserRouter>
+    <GamesContextProvider>
+      <App />
+    </GamesContextProvider>
+  </BrowserRouter>
 );

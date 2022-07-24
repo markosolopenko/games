@@ -1,4 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { CHOOSE_GAME } from "../../actions/gamesActions";
+import { ROUTES } from "../../constants/routes";
+import { GamesContextDispatch } from "../../context/GamesContext";
 import { Game as GameType } from "../../types/types";
 
 import styles from "./styles.module.scss";
@@ -9,9 +13,11 @@ type GameProps = {
 
 const Game = ({ game }: GameProps): JSX.Element => {
   const [[gameId, gameBody]] = Object.entries(game);
-  const { title, demo } = gameBody;
+  const dispatch = useContext(GamesContextDispatch);
+  const { title } = gameBody;
+
   const handleButtonClick = () => {
-    window.open(`https://domain.com/${demo}`);
+    dispatch({ type: CHOOSE_GAME, payload: game });
   };
 
   return (
@@ -20,10 +26,13 @@ const Game = ({ game }: GameProps): JSX.Element => {
         <img src={`https://cdn.softswiss.net/i/s3/${gameId}.png`} alt="Error" />
       </div>
       <div className={styles.title}>{title}</div>
-
-      <button className={styles.button} onClick={handleButtonClick}>
+      <Link
+        className={styles.button}
+        to={ROUTES.DEMO}
+        onClick={handleButtonClick}
+      >
         Play
-      </button>
+      </Link>
     </div>
   );
 };

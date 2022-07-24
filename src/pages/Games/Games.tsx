@@ -5,7 +5,7 @@ import React, {
   useMemo,
   useState,
 } from "react";
-import { FETCH_GAMES } from "../../actionTypes/gamesActions";
+import { FETCH_GAMES } from "../../actions/gamesActions";
 import { getGames, getProviders } from "../../api/gamesRequests";
 import Game from "../../components/Game/Game";
 import Input from "../../components/Input/Input";
