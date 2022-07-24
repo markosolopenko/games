@@ -1,0 +1,23 @@
+{
+  "extends": ["@shelf/eslint-config/frontend-typescript"],
+  "rules": {
+    "no-console": 1,
+    "react/react-in-jsx-scope": 0,
+    "sort-imports": 0,
+    "prettier/prettier": 0,
+    "@typescript-eslint/no-unused-vars": 1,
+    "react-hooks/exhaustive-deps": 0,
+    "@typescript-eslint/consistent-type-imports": 0,
+    "sonarjs/no-small-switch": 0,
+    "testing-library/await-async-query": 0,
+    "react/display-name": 0,
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "any",
+        "prev": "multiline-block-like",
+        "next": "multiline-block-like"
+      }
+    ]
+  }
+}
