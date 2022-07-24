@@ -20,7 +20,7 @@ const Game = ({ game }: GameProps): JSX.Element => {
         <img src={`https://cdn.softswiss.net/i/s3/${gameId}.png`} alt="Error" />
       </div>
       <div className={styles.title}>{title}</div>
-      <iframe src={`https://domain.com/it/${demo}`} />
+
       <button className={styles.button} onClick={handleButtonClick}>
         Play
       </button>
